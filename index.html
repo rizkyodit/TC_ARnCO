@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Technical Test AR&CO Rizky Yoditia</title>
+		<link rel="stylesheet" href="/style.css" />
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="/script.js"></script>
+		<script src="/texture.js"></script>
+	</head>
+	<body style="margin: 0px; overflow: hidden">
+		<a-scene embedded arjs renderer="colorManagement: true;">
+			<a-marker preset="hiro">
+				<a-entity
+					id="model"
+					position="0 0.4 0"
+					scale="0.25 0.25 0.25"
+					rotation="0 0 0"
+					gltf-model="asset/scene.gltf"
+					animation-mixer="clip:Scene; loop:10000000000000000000; timeScale: 1; crossFadeDuration: 1"
+				></a-entity>
+			</a-marker>
+			<a-entity camera id="scene"></a-entity>
+		</a-scene>
+	</body>
+</html>
